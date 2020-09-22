@@ -1,0 +1,91 @@
+css的三大特性:层叠性,继承性,优先级
+
+定于特定部位的css
+在style里用   .名字{属性修改}      在特定某个标签里加入 class：名字   
+例如   <style> .zizi{ color：pink}  </style>        <body> <div class="zizi">   </div></body>
+background 插入背景图片 用法->  background:url(图片地址) no-repeat
+                      可以用这种方法消除背景图过大不能完全显示的问题      background-size:100% 100%;   
+
+font-size       字号大小  常用单位px
+font-family   字体
+font综合写法   font:是否倾斜  是否加粗  大小  字体  例子:font:italic(倾斜) bold(加粗) 14px(大小) "微软雅黑"
+color             颜色
+background-color   背景颜色
+background-image   背景图片
+background-position   背景位置  例如 background-position：right top    图片位置右上
+                                                     或者 background-position：10px 10px   先是x轴后到y轴
+                                                     或者 background-position：10px  center   
+background-size   设置背景图片的大小 ，直接写width和height是背景的大小设置。 
+background-repeat    是否平铺，是x平铺还是y平铺    例如 background-repeat:no-repeat 不平铺
+                                                                                           background-repeat:repeat-x x平铺
+background-attachment  图片是否随着内容滚动而滚动
+                                       属性： scroll   图片会滚走，默认是这个
+                                                  fixed   图片固定，滚动的只有内容
+background综合写法  background：背景颜色 背景图片地址 背景是否平铺 背景滚动 背景位置
+                            例如 background：#000 url（1.jpg） no-repeat fixed center 15px；
+display   属性规定元素应该生成的框的类型
+              block              把属性转成块级元素，变成一个区域
+              inline-block       行内块元素,有宽高属性且不会独占一行
+              list-item	        此元素会作为列表显示。
+display:inline-block;   转化成行内块,一般使用在行内元素中例如链接a,因为行内元素没有大小
+text-align:center   文字水平居中   left 左对齐   right 右对齐---------------------------------------
+text-indent：2em    文字首头缩近2em  1em等于一个汉字的宽度
+text-decoration:none 取消下划线
+line-height：50px      行高50px   小技巧：当它设置为和背景一样高度就可使文字垂直居中---------------------------------
+letter-spacing：2px    设置字间距2px
+属性选择器：（1）
+  例如 css里  input[value]{  color:red}   html里<input type="text" value="文本框"> <input type="submit">只有前面带有value的会变红色
+ 伪类选择器:向选择器添加一些特殊效果,比如给链接添加效果让鼠标移到链接上链接会变色
+比如链接a的css:  a:hover{background-color:red;}  鼠标移到链接上链接变红色
+                        属性:link 还没访问时的链接状态
+                                visited 已经访问了一次的状态,比如已经点过某个链接,这个链接状态就会变化
+                                hover 鼠标移动到链接上链接变化
+                                 active 当我们点击鼠标不松开显示的状态
+
+-------------------------------------------------------------------
+盒子组成::::::::
+border  边框
+直接用        border-width   边框宽度
+                  border-color    边框颜色
+                  border-style    边框样式
+                   样式属性:none 无边框
+                                  solid 边框实线(实用)
+                                  dashed 边框虚线
+                                   dotted 边框点线
+                                   double 边框双实线
+综合使用       border:1px solid red
+
+                  border-collapse:collapse;表示边框合并在一起
+                   border-radius  圆角边框
+                 padding  内边距  指边框与内容之间的距离
+                 padding-top  上内距离 padding-right 右内距离 padding-bottom下内边距
+
+margin 设置外边距                注意!!! 子类使用margin,会导致父类也进行移动,而子类与父类之间的间距是不会变化的,margin主要是与其他容器的距离
+             属性:margin-top 上外边距离
+                    margin-right 右外边距离
+                    margin-bottom 下外边距离
+                   margin-left 左外边距离
+              总::margin:上 右 下 左
+               当边框宽度确定,用margin 0 auto;可以让边框居中
+float   把图像向某个方向浮动 -----------------------------------------------------------------------------------
+           left	元素向左浮动。
+          right                  元素向右浮动。
+          none	默认值。元素不浮动，并会显示在其在文本中出现的位置。
+          inherit	规定应该从父元素继承 float 属性的值。
+position 属性规定元素的定位类型,不占物理位置
+属性:
+absolute	生成绝对定位的元素，相对于 static 定位以外的第一个父元素进行定位。元素的位置通过 "left", "top", "right" 以及 "bottom" 属性进行规定。
+fixed	生成绝对定位的元素，相对于浏览器窗口进行定位。元素的位置通过 "left", "top", "right" 以及 "bottom" 属性进行规定。
+relative	生成相对定位的元素，相对于其正常位置进行定位。因此，"left:20" 会向元素的 LEFT 位置添加 20 像素。
+static	默认值。没有定位，元素出现在正常的流中（忽略 top, bottom, left, right 或者 z-index 声明）。
+inherit	规定应该从父元素继承 position 属性的值。
+                     
+                           
+                           
+
+                              
+
+
+
+
+                    

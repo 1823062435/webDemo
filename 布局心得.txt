@@ -1,0 +1,10 @@
+布局页面心得:
+主体上
+把整个页面分成上中下三个部分
+
+中间部分分成左中右三个部分,采用双飞翼布局
+先把中间宽度改成自适应即width:100%,再把左边盒子拉上,即.left{margin-left:-100%},再把右盒子拉上,用.right{margin-right:-200px}
+再把中间盒子安全显示,即.container{padding:0 200px}    200px为左右盒子宽度,再给左右盒子定位,即.left{position:relative;left:-200px}  .right{position:relative;left:-210px}
+
+页面最中间的白色部分用flex布局
+把中间白色装盒子部分从上到下分成6个大容器,再分别再每个大容器里装上小盒子,用display: flex;指定容器为flex布局,再使用flex的一些属性即可完成布局

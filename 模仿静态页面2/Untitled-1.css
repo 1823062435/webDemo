@@ -1,0 +1,39 @@
+.top{
+    height: 200px;
+    width: 400px;
+    margin:50px auto 0px auto;
+}
+.middle{
+    width: 620px;
+    height: 46px;
+    margin: 0px auto 0px auto;
+    border-radius: 22px;
+    border:1px solid #ffffff;
+    padding-left: 20px;
+    box-shadow:1px 1px 1px 1px #888888;
+}
+.tu{
+    height: 45px;
+}
+input{
+    font-size: 16px;
+    opacity: 1;
+    width: 540px;
+    height:40px;
+    float:left;
+    background: none;
+    outline:none;
+    border:none;
+}
+.left{
+    float:left;
+}
+.bottom{
+    height: 70px;
+    width: 700px;
+    margin: 30px auto 0px auto;
+}
+.tuya{
+    float:left;
+    margin-left:25px;
+}
