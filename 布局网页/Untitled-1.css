@@ -1,0 +1,184 @@
+*{
+    margin: 0px;
+    padding:0px;
+}
+body{
+min-width: 700px;
+min-height: 700px;
+}
+#header{
+height: 100px;
+width:100%;
+background-color: black;
+color:white;
+font-size:30px;
+line-height:100px;
+text-align: center;
+
+
+}
+#main{
+padding-left: 200px; 
+padding-right: 200px;
+overflow:hidden;
+
+}
+#main .tong{
+height:529px;
+position:relative;
+float:left;
+font-size: 15px;
+
+}
+#center{
+width:100%;
+background-color:white; 
+text-align:center;
+line-height:529px;
+display:flex;
+flex-direction: column;
+
+}
+#left{
+width: 200px;
+right:200px;
+background-color: green;
+text-align:center;
+margin-left: -100%;
+}
+
+#right{
+width: 200px;
+background-color: green;
+text-align:center;
+margin-right:-200px;
+
+}
+
+
+footer{
+height: 100px;
+width: 100%;
+background-color: black;
+color:white;
+font-size:30px;
+line-height:100px;
+text-align: center;
+clear:both;
+
+}
+
+.yu{
+ margin:12px 12px;
+display:flex;
+flex-direction: row;
+} 
+
+.aa{
+width:49%;
+height:45px;
+border:2px solid black;   
+border-radius:4px;
+font-size:15px;
+text-align:center;
+line-height:45px;
+}
+.bb{
+width:33%;
+height:45px;
+border:2px solid black;  
+border-radius:4px;
+font-size:15px;
+text-align:center;
+line-height:45px;
+}
+.cc{
+width:49%;
+height:40px;
+border:2px solid black;   
+border-radius:4px;
+font-size:15px;
+text-align:center;
+line-height:20px;
+display:flex;
+flex-direction:column;
+}
+.dd{
+height: 45px;
+width:100%;
+border:2px solid black;
+border-radius:4px;
+font-size:15px;
+text-align:center;
+line-height:45px;
+}
+.ee{
+height:45px;
+border:2px solid black;  
+border-radius:4px;
+font-size:15px;
+text-align:center;
+line-height:45px;
+}
+.ff{
+
+border:2px solid black;  
+border-radius:4px;
+font-size:15px;
+text-align:center;
+
+}
+
+#a1{
+margin-right:24px;
+}
+
+#b1{
+margin-right:24px;
+}
+#b2{
+margin-right:24px;
+}
+
+#c{
+height: 100px;
+}
+
+#c1{
+margin-right:24px;
+padding-top: 30px;
+padding-bottom: 30px;
+}
+#c2{
+padding-top: 10px;
+padding-bottom: 50px;
+}
+
+#e1{
+width:50%;
+margin-right:24px;
+}
+#e2{
+width:24%;
+margin-right:24px;
+}
+#e3{
+width:24%;
+}
+#f{
+height: 95px;
+}
+
+#f1{
+height:35px;
+width:33%;
+margin-right:24px;
+padding-top: 20px;
+padding-bottom: 40px;
+line-height:20px;
+}
+#f2{
+height:95px;
+width:66%;
+line-height:95px;
+}

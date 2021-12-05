@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+    <style>
+    body{
+        background-image:url(1.jpg);
+        background-repeat: no-repeat;
+        background-position: center top;
+        background-size: 100% 800px;
+        text-align: center;
+    }
+    .tianqi{
+        text-align: center;
+        margin-top: 60px;
+    }
+    input{
+        width: 600px;
+        height: 35px;
+        margin-top: 40px;
+        outline:none;
+    }
+    button{
+        width: 70px;
+        height: 39px;
+        outline:none;
+        border:none;
+    }
+   
+    
+    </style>
+</head>
+<body>
+    
+    <div class="tianqi">
+        <img src="font1.png" alt="">
+    </div>
+    
+    <input type="text" id="ID">
+    <button id="send">搜索</button>
+    <br />
+    <div class="xuanze">当前选择:
+     <div id="choose">城市</div>
+    </div>
+    <div >结果:
+        <div id="text"></div>
+    </div>
+    <script type="text/javascript">
+     
+      var ding=document.getElementById("send");
+          ding.onclick=function () {
+            var ID =document.getElementById("ID").value;
+              var choose =document.getElementById("choose");
+              choose.innerHTML=ID;
+               $.ajax({
+                 type: 'get',
+                 dataType:'json',
+                 url: "http://wthrcdn.etouch.cn/weather_mini",  
+                 data:{
+                     city:ID
+                 },
+                 contentType:"application/josn",
+                success: function(res){  
+                  var text=document.getElementById("text");
+                  console.log(status);
+                 if(res.status==1000){
+                    
+                  text.innerHTML=res.data.city+':'+res.data.forecast[0].date+" "+res.data.forecast[0].high+" "+res.data.forecast[0].fengli+" "+res.data.forecast[0].low+" "+res.data.forecast[0].fengxiang;
+                  console.log(res);
+    
+                 }else{
+                     text.innerHTML="403 fidden";
+                     console.log(res);
+                    
+                 }
+                },error:function(err){
+                    var text=document.getElementById("text");
+                    text.innerHTML="403 fidden";
+                    console.log(err);
+                   
+                }
+            });
+     
+          }
+        a=2;
+        b=3;
+        console.log(a+b);
+    
+        </script>
+</body>
+</html>
